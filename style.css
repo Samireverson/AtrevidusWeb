@@ -193,15 +193,11 @@ flex-basis: 20%;
     justify-content: center;
     gap: 12px;
  }
+ .clik,
 .check{
     display: none;
 }
 .box1{
-    display: none;
-}
-.clik{
-    font-size: 45px;
-        color: #000;
     display: none;
 }
 
@@ -211,6 +207,9 @@ flex-basis: 20%;
     *{
         margin: 0;
         padding: 0;
+    }
+    .logo{
+        display: none;
     }
     .navbar{
         position: absolute;
@@ -245,8 +244,11 @@ flex-basis: 20%;
         transition: 0.8s;
         background: transparent;
     }
-    .clik, .check{
+    .clik{
         display: block;
+    }
+    .check{
+        display: none;
         
     }
     .check:checked ~ .navbar{
