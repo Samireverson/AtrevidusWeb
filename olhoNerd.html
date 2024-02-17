@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shotcut icon" type="x-icon" href="./logoAN.png">
+    <link rel="stylesheet" href="./olhoNerd.css">
+    <title>olho por nerd</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#"><img src="./atrevidus_logo.png" alt="logo" width="90px" height="90px" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"></a>
+        <div id="clic" onclick="toggleMode()">
+            <button>
+            <span>MODO<BR>🌙DARK</span>
+        </button>
+        </div>
+        <div class="menux">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./Noticia.html">NOTÍCIAS</a></li>
+                    <li><a href="#">LOJA</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="box">
+            <input type="text" placeholder="pesquisar...">
+            <a href="#">
+                <ion-icon name="search"></ion-icon>
+            </a>
+        </div>
+    </header>
+    <div class="imgBG2"></div><br><br>
+    <h1 style="text-align: center; font-size: 50px;">____________OLHO POR OLHO, NERD POR NERD____________</h1><br><br>
+<main>
+<section id="podcast">
+    <div>
+        <a class="title" href="#"style="text-decoration: none;"><h1 style="text-decoration: underline;">OLHO POR OLHO, NERD POR NERD</h1></a><br><br> 
+        <span style="font-size: 25px;">
+            <p>O programa <b>"OLHO POR OLHO, NERD POR NERD"</b> é um podcast idealizado por amantes da cultura pop como filmes, quadrinhos, livros, games e afim que leva aos consumidores dos conteúdos do site uma forma bastante descontraída as novidades e também informações já passadas para que o fã esteja sempre informado sobre as maravilhas do mundo <b>NERD/GEEK.</b></p>
+        </span>
+    </div>
+    <a href="#">
+        <img id="pic" src="./olhoNerd.png" alt="">
+    </a>
+</section>
+
+<section id="podcast">
+    <a href="#">
+        <img id="pic" src="./nerdMNoite.png" alt="">
+    </a>
+    <div>
+        <a class="title" href="#"style="text-decoration: none;"><h1 style="text-decoration: underline;">NERDs DA MEIA-NOITE</h1></a><br><br> 
+        <span style="font-size: 25px;">
+            <p>O programa <b>"NERDs DA MEIA-NOITE"</b> é um programa que conta com as diversas histórias inusitadas e incomuns enviadas por fãs sobre situações da sua vida que estejam ligadas a cultura pop. Serão disponibilizados conteúdos em formatos de vídeos lendo as histórias em fortmatos de "reels", com duração máxima de 2(dois) minutos.</p>
+        </span>
+    </div>
+</section>
+</main>
+<footer><b>SIGA AS NOSSAS REDES SOCIAIS:</b> <br><br>
+    <div class="imedia">
+        <a href="https://www.instagram.com/atrevidus_nerd/" target="_blank"><img src="./insta.png" alt="" width="50px"></a>
+        <a href="https://twitter.com/Atrevidusnerd" target="_blank"><img src="./twitter.png" alt="" width="50px"></a>
+    </div><br><br>  
+    Desenvolvido por <a href="#"><strong>IMPERIUS DEV <img src="./img1/imperius_DevLogo-removebg-preview.png" width="60px" alt=""></strong></a></footer> 
+
+
+
+
+</body>
+<script>
+    function toggleMode(){
+        const html = document.documentElement
+        html.classList.toggle("light")
+    }
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

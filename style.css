@@ -12,15 +12,19 @@ body{
 :root{
     --bg-color:#fff;
     color: #000;
+    --card-color:#333;
+    --cardp-color: #fff;
 }
 .light{
     --bg-color:#333;
-    color:#fff
+    color:#fff;
+    --card-color: #fff;
+    --cardp-color:#000;
 }
 
 .header{
     /*border: 1px solid red;*/
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -30,6 +34,7 @@ body{
     align-items: center;
     background-color: #e3e0e0;
     box-shadow: 0 5px 10px #000;
+    z-index: 1;
 }
 .navbar ul{
     list-style: none;
@@ -107,37 +112,100 @@ body{
         width: 400px;
     }
  #imgBG{
-      height: 450px;
+      height: 550px;
       width: 100%;
-      background: url("https://ultimatodobacon.com/static/abe98e62fba0c834f105c03e334ae267/a7cb7/GERA%25C3%2587%25C3%2595ES-3.jpg");
-      background-size: cover;
+      background: url("/bannAN.png");
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment:fixed;
-    }
-    #projeto{
-        display: flex;
-        align-items: center;
-        gap: 32px;
-        padding: 24px 80px 120px 80px;
-        position: relative;
-      }
-      
-      #objetivo{
-        display: flex;
-        align-items: center;
-        gap: 32px;
-        padding: 24px 80px 120px 80px;
-        position: relative;
-      }
-      #pic{
-        width: 300px;
-      }
-      #pic:hover{
-        cursor: pointer;
-        transition: all 0.3s;
-        width: 350px;
-      }
+      background-color: #fff;
+ }
+ .carrosel {
+    border: 1px solid red;
+    visibility: visible;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scrollbar-width:none;
+}
+.pic img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    width: calc(200px *2);
+}
+.pic{
+    flex: 1 0 auto;
+    margin: 0 5px;
+    width: 400px;
+    height: 300px;
+}
+.container{
+display: flex;
+gap: 1rem;
+}
+aside, main {
+margin: 10px;
+height: 95vh;
+}
+main{
+ border: 1px solid green;
+flex: 1;
+}
+aside{
+flex-basis: 20%;
+}
+.card .img1{
+  width: 300px ;
+  background: var(--card-color);
+}
+.card h2{
+    text-align: center;
+    justify-content: center;
+    background: var(--card-color);
+    color: var(--cardp-color);
+}
+.card p{
+    text-align: center;
+    justify-content: center;
+    background: var(--card-color);
+    color: var(--cardp-color);
+}
+.card p{
+    visibility: hidden;
+}
+.card:hover p{
+    visibility: visible;
+}
+
+
+
+ footer{
+    width: 100%;
+    padding: 32px;
+    background: #e3e0e0;
+    color: #000;
+    text-align: center;
+}
+.imedia{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
