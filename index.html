@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shotcut icon" type="x-icon" href="./logoAN.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Atrevidus Nerd</title>
+</head>
+<body>
+        <header class="header">
+            <a href="#" class="logo"><img src="./atrevidus_logo.png" alt="" width="90px" height="90px"onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"></a>
+            <div id="clic" onclick="toggleMode()">
+                <button>
+                    <a href="#">
+                        <ion-icon name="moon"></ion-icon>
+                    </a></button>
+                    <span>MODO<BR>DARK</span>
+            </div>
+            <div class="menux">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="">DESTAQUE <ion-icon name="chevron-down"></ion-icon></a>
+                    <ul>
+                            <li><a href="#">NOTICIAS</a></li>
+                            <li><a href="#">PROGRAMAS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">LOJA</a></li>
+                </ul>
+            </nav>
+           </div>
+            <div class="box">
+                <input type="text" placeholder="pesquisar...">
+                <a href="#">
+                    <ion-icon name="search"></ion-icon>
+                </a>
+                
+            </div>
+        </header>
+        
+        <div>
+    <div id="imgBG"></div>
+    <div class="content">
+        <main>
+              <section id="projeto">
+                
+                <div>
+                  <h1>O Projeto</h1><br>
+                  <p>O Observatório de Saúde da Região da Baixada Fluminense, integrante do Consórcio Intermunicipal de Saúde da Baixada Fluminense - CISBAF em parceria com Centro de Estudos e Pesquisa em Saúde Coletiva (CEPESC).</p> <br>
+                  <p>Instituído em maio de 2016, tem como propósito promover a análise, estudo e pesquisa dos indicadores de saúde como subsídio para a formulação e avaliação de políticas públicas dos municípios, bem como dos processos de formação e capacitação profissional com o objetivo de apoiar os espaços institucionais para o funcionamento e o aprimoramento contínuo do Sistema Único de Saúde - SUS. Para tanto, realiza estudos nas bases bibliográficas e outras fontes de informação dos bancos de dados oficiais</p>
+                </div>
+                <img id="pic" src="./projetbox.jpeg" alt="">
+              </section>
+              <section  id="objetivo">
+                <img id="pic" src="./Boletinbox.PNG" alt="">
+                <div>
+                  <h1>Objetivo</h1><br>
+                  <p>Organizar, agregar e sistematizar informações, com vistas ao acompanhamento dos indicadores de saúde, permitindo compreender as características epidemiológicas da população da Baixada Fluminense, subsidiando a tomada de decisão. </p>
+                </div>
+                
+              </section>
+              <section id="objetivo">
+                <div>
+                  <h1>Objetivos Específicos</h1><br>
+                  <p>
+                    <ul>
+                      <li>Mapear os agravos prevalentes da Central de Regulação de Urgências Regional da Baixada Fluminense; e</li><br>
+                      <li>Identificar as demandas dos profissionais por educação permanente e oportunizar espaços para experiências formativas problematizadoras.</li>
+                    </ul>
+                   </p>
+                </div>
+                <img id="pic" src="./WhatsApp Image 2024-02-02 at 11.32.30.jpeg" alt="">
+                
+              </section>
+            </main>
+      </div>
+    
+</body>
+    <script>
+        function toggleMode(){
+  const html = document.documentElement
+  //mudar tema entre claro e escuro
+  html.classList.toggle("light")}
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>

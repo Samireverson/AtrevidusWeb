@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    border: 1px solid red;
+    background: var(--bg-color)
+    /*min-width: 100vh;*/
+}
+:root{
+    --bg-color:#fff;
+    color: #000;
+}
+.light{
+    --bg-color:#333;
+    color:#fff
+}
+
+.header{
+    /*border: 1px solid red;*/
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3e0e0;
+    box-shadow: 0 5px 10px #000;
+}
+.navbar ul{
+    list-style: none;
+   /* border: 1px solid red;*/
+    
+}
+.navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.navbar ul li a{
+    font-size: 25px;
+    padding: 20px;
+    color: #000;
+    display: block;
+    text-decoration: none;
+}
+.navbar ul li a:hover{
+    background-color: #333;
+    color:#fff;
+    transition: all 0.4s;
+}
+
+.navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 195px;
+    background-color: #e3e0e0;
+    display: none;
+}
+.navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid #000;
+}
+.navbar ul li:hover > ul{
+    display: initial;
+}
+#clic{
+   /* border: 1px solid red;*/
+    width: 90px;
+    /*position: relative;*/
+    margin: 4px auto;
+    cursor: pointer;
+}
+#clic button{
+   /* display: none;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;*/
+    border: none;
+    position: relative;
+    left: 0;
+    z-index: 1;
+    background: url(./moon-svgrepo-com.svg) no-repeat center;
+    
+}
+.box{
+    display: flex;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 50px;
+    align-items: center;
+    box-shadow: 0 5px 10px #000;
+    
+}
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    transition: 0.8s;
+    background: transparent;
+}
+.box:hover input{
+        width: 400px;
+    }
+ #imgBG{
+      height: 450px;
+      width: 100%;
+      background: url("https://ultimatodobacon.com/static/abe98e62fba0c834f105c03e334ae267/a7cb7/GERA%25C3%2587%25C3%2595ES-3.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment:fixed;
+    }
+    #projeto{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        padding: 24px 80px 120px 80px;
+        position: relative;
+      }
+      
+      #objetivo{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        padding: 24px 80px 120px 80px;
+        position: relative;
+      }
+      #pic{
+        width: 300px;
+      }
+      #pic:hover{
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 350px;
+      }
+
+
+
+
+
+@media(max-width: 600px){
+   
+
+}
