@@ -8,7 +8,7 @@
     <title>Atrevidus Nerd</title>
 </head>
 <body>
-        <header class="header">
+        <header class="header">            
             <a href="#" class="logo"><img src="./atrevidus_logo.png" alt="" width="90px" height="90px"onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"></a>
             <div id="clic" onclick="toggleMode()">
                 <button>
@@ -16,9 +16,20 @@
                         <ion-icon name="moon"></ion-icon>
                     </a></button>
                     <span>MODO<BR>DARK</span>
+                        
             </div>
-            <div class="menux">
-            <nav class="navbar">
+            <input type="checkbox" class="check">
+            <label for="check" class="clik">
+                <ion-icon name="menu"></ion-icon>
+            </label>
+            <div class="navbar"><br>
+                <div class="box1">
+                    <input type="text" placeholder="pesquisar...">
+                    <a href="#">
+                        <ion-icon name="search"></ion-icon>
+                    </a>
+                </div><br><br>
+            <nav class="menux">
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">DESTAQUE <ion-icon name="chevron-down"></ion-icon></a>
@@ -36,19 +47,19 @@
                 <a href="#">
                     <ion-icon name="search"></ion-icon>
                 </a>
-                
             </div>
+            
         </header>
         <div><img id="imgBG" src="#" alt=""></div>
 
     <div class="container">
-        <main>
+        <main class="main">
             <h1 style="text-align: center;" >imagens em destaque</h1><br><br>
             <section>
                 
             </section>
         </main>
-        <aside>
+        <aside class="side">
             <div class="cartao">
                 <div class="card">
                 <img class="img1" src="/img1/podnerd1.jpg" alt="">
@@ -105,5 +116,5 @@
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+ 
 </html>
