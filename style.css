@@ -65,6 +65,7 @@ body{
     width: 195px;
     background-color: #e3e0e0;
     display: none;
+    z-index: 1;
 }
 .navbar ul li ul li{
     width: 100%;
