@@ -209,6 +209,7 @@ flex-basis: 20%;
     *{
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
     .logo{
         display: none;
@@ -262,7 +263,17 @@ flex-basis: 20%;
         font-size: 35px;
         margin: 5px;
         line-height: 30px;
+     }
+    aside, main{
+        display: none;
+    }
+    .side{
+        position:static;
+        display: block;
     }
 
-     
-}
+
+
+
+
+    }
