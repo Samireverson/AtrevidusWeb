@@ -128,13 +128,12 @@ body{
     display: flex;
     flex-wrap: nowrap;
     overflow: scroll;
-    scrollbar-width: none;
+    scrollbar-width:none;
 }
 .pic img {
     overflow-clip-margin: content-box;
     overflow: clip;
     width: calc(200px *2);
-    /*border-radius: 50%;*/
 }
 .pic{
     flex: 1 0 auto;
