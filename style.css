@@ -115,7 +115,7 @@ body{
  #imgBG{
       height: 550px;
       width: 100%;
-      background: url("/img1/bannAN.png");
+      background: url(./img1/bannAN.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
