@@ -134,12 +134,13 @@ body{
     overflow-clip-margin: content-box;
     overflow: clip;
     width: calc(200px *2);
+    /*border-radius: 50%;*/
 }
 .pic{
     flex: 1 0 auto;
     margin: 0 5px;
     width: 400px;
-    height: 300px;
+    height: 400px;
 }
 .container{
 display: flex;
