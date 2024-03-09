@@ -9,27 +9,45 @@
 </head>
 <body>
     <header class="header">
-        <a href="#"><img src="./atrevidus_logo.png" alt="logo" width="90px" height="90px" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"></a>
+        <input type="checkbox" id="checkbox" class="check">
+        <label for="checkbox" class="clik">
+            <img width="90px" src="./atrevidus_logo.png" alt="">
+            <span></span></label>           
+        <a href="#" class="logo"><img src="./atrevidus_logo.png" alt="" width="90px" height="90px"onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"></a>
         <div id="clic" onclick="toggleMode()">
             <button>
-            <span>MODO<BR>🌙DARK</span>
-        </button>
+                <a href="#">
+                    <ion-icon name="moon"></ion-icon>
+                </a></button>
+                <span>MODO<BR>DARK</span>                        
         </div>
-        <div class="menux">
-            <nav class="navbar">
+        <div class="navbar"><br>
+            <div class="box1">
+                <input type="text" placeholder="pesquisar...">
+                <a href="#">
+                    <ion-icon name="search"></ion-icon>
+                </a>
+            </div><br><br>
+        <nav class="menux">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="#">DESTAQUE <ion-icon name="chevron-down"></ion-icon></a>
                 <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./programas.html">PROGRAMAS</a></li>
-                    <li><a href="#">LOJA</a></li>
-                </ul>
-            </nav>
-        </div>
+                        <li><a href="./Noticia.html">NOTICIAS</a></li>
+                        <li><a href="./programas.html">PROGRAMAS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">LOJA</a></li>
+            </ul>
+        </nav>
+       </div>
         <div class="box">
             <input type="text" placeholder="pesquisar...">
             <a href="#">
                 <ion-icon name="search"></ion-icon>
             </a>
         </div>
+        
     </header>
     <div class="imgBG3"></div><br><br>
     <h1 style="text-align: center; font-size: 50px;">____________NOTÍCIAS____________</h1><br><br>
