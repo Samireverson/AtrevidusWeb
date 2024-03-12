@@ -14,12 +14,14 @@ body{
     color: #000;
     --card-color:#333;
     --cardp-color: #fff;
+    --bg-background: url(./img1/bannAN.png);
 }
 .light{
     --bg-color:#333;
     color:#fff;
     --card-color: #fff;
     --cardp-color:#000;
+    --bg-background: url(./img1/bannAN2.jpg);
 }
 
 .header{
@@ -115,12 +117,12 @@ body{
  #imgBG{
       height: 550px;
       width: 100%;
-      background: url(./img1/bannAN.png);
+      background: var(--bg-background);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment:fixed;
-      background-color: #fff;
+      background-color: var(--cardp-color);
  }
  .carrosel {
     border: 1px solid red;
