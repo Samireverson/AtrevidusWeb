@@ -15,6 +15,7 @@ body{
     --card-color:#333;
     --cardp-color: #fff;
     --bg-background: url(./img1/bannAN.png);
+    --luz-head: #000;
 }
 .light{
     --bg-color:#333;
@@ -22,6 +23,7 @@ body{
     --card-color: #fff;
     --cardp-color:#000;
     --bg-background: url(./img1/bannAN2.jpg);
+    --luz-head: #fff;
 }
 
 .header{
