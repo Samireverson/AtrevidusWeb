@@ -121,6 +121,25 @@ color: var(--ltr-color);
    background-image: url(./img1/news.jpg);
 
 }
+.carrosel {
+    /* border: 1px solid red;*/
+     visibility: visible;
+     display: flex;
+     flex-wrap: nowrap;
+     overflow: scroll;
+     scrollbar-width:none;
+ }
+ .pic img {
+     overflow-clip-margin: content-box;
+     overflow: clip;
+     width: calc(200px *2);
+ }
+ .pic{
+     flex: 1 0 auto;
+     margin: 0 5px;
+     width: 400px;
+     height: 400px;
+ }
 #pic{
     width: 250px;
     cursor: pointer;

@@ -5,7 +5,7 @@
 }
 
 body{
-    border: 1px solid red;
+   /* border: 1px solid red;*/
     background: var(--bg-color)
     /*min-width: 100vh;*/
 }
@@ -127,7 +127,7 @@ body{
       background-color: var(--cardp-color);
  }
  .carrosel {
-    border: 1px solid red;
+   /* border: 1px solid red;*/
     visibility: visible;
     display: flex;
     flex-wrap: nowrap;
