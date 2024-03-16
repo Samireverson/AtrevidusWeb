@@ -1,154 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="programas.css">
-  <link rel="shortcut icon" type="image/x-icon" href="./atrevidus_logo.png">
-  <title>Loja Nerd</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olho por Nerd</title>
 </head>
 <body>
-  <header class="header">
-    <input type="checkbox" id="menu-toggle" class="hidden">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <a href="#" class="logo">
-      <img src="./img1/OIG1.jpg" alt="Logo" width="90px" height="90px">
-    </a>
-    <div class="mode-toggle" onclick="toggleMode()">
-      <button><ion-icon name="moon"></ion-icon></button>
-      <span>MODO<br>DARK</span>
-    </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="./index.html">HOME</a></li>
-        <li>
-          <a href="#">DESTAQUE <ion-icon name="chevron-down"></ion-icon></a>
-          <ul>
-            <li><a href="./Noticia.html">NOTÍCIAS</a></li>
-            <li><a href="./olhoNerd.html">PROGRAMAS</a></li>
-          </ul>
-        </li>
-        <li><a href="./loja.html">LOJA</a></li>
-      </ul>
-    </nav>
-    <div class="search-box">
-      <input type="text" placeholder="Pesquisar...">
-      <button><ion-icon name="search"></ion-icon></button>
-    </div>
-  </header>
+    <!-- Seu código HTML aqui -->
 
-  <div class="container">
-    <div id="main">
-      <h2>Roupas</h2>
-      <div class="product">
-        <img src="./imgshop/camisadevil.jpg" alt="Camiseta Nerd" width="200px">
-        <h3>Regata Atrevidus Nerd - Demon</h3>
-        <p>Preço: $15</p>
-        <button onclick="addToCart('Regata Atrevidus Nerd - Demon', 15, './imgshop/camisadevil.jpg')">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product">
-        <img src="./imgshop/camisasamurai.jpg" alt="Moleton Star Wars" width="200px">
-        <h3>Regata Atrevidus Nerd - Samurai</h3>
-        <p>Preço: $25</p>
-        <button onclick="addToCart('Regata Atrevidus Nerd - Samurai', 25, './imgshop/camisasamurai.jpg')">Adicionar ao Carrinho</button>
-      </div>
-    </div>
+    <section id="podcast-list">
+        <div class="episode">
+            <img src="./audio/tava.jpg" alt="Episode 1">
+            <h2 class="episode-title">Episódio 1: Tava fora do BR?</h2>
+            <button class="play-btn" onclick="playPause('audio1')">Play/Pause</button>
+            <button class="download-btn" onclick="downloadEpisode('./audio/Episode 1 tava fora do BR.mpeg')">Download</button><br>
+            <audio id="audio1" style="visibility: hidden;" controls>
+                <source src="./audio/Episode 1 tava fora do BR.mpeg" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div><br>
+        <div class="episode">
+            <img src="./audio/bomdia.jpg" alt="Episode 2">
+            <h2 class="episode-title">Episódio 2: Mermão, bom dia é o baralho!</h2>
+            <button class="play-btn" onclick="playPause('audio2')">Play/Pause</button>
+            <button class="download-btn" onclick="downloadEpisode('./audio/bom dia.mpeg')">Download</button><br>
+            <audio id="audio2" style="visibility: hidden;" controls>
+                <source src="./audio/bom dia.mpeg" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div><br>
+        <!-- Adicione outros episódios conforme necessário -->
+    </section>
 
-    <div id="aside">
-      <h2>Canecas</h2>
-      <div class="product">
-        <img src="./imgshop/canecpirat.jpg" alt="Caneca Harry Potter" width="200px">
-        <h3>Caneca Atrevidus Nerd - Pirata</h3>
-        <p>Preço: $10</p>
-        <button onclick="addToCart('Caneca Atrevidus Nerd - Pirata', 10, './imgshop/canecpirat.jpg')">Adicionar ao Carrinho</button>
-      </div>
-      <div class="product">
-        <img src="./imgshop/canecviking.jpg" alt="Caneca Batman" width="200px">
-        <h3>Caneca Atrevidus Nerd - Viking</h3>
-        <p>Preço: $8</p>
-        <button onclick="addToCart('Caneca Atrevidus Nerd - Viking', 8, './imgshop/canecviking.jpg')">Adicionar ao Carrinho</button>
-      </div>
-    </div>
+    <!-- Seu código JavaScript aqui -->
 
-    <div id="cart">
-      <h2>Carrinho</h2>
-      <div id="cart-container">
-        <ul id="cart-items"></ul>
-        <p>Total: $<span id="total">0</span></p>
-      </div>
-    </div>
-  </div>
+    <script>
+        function playPause(audioId) {
+            var audio = document.getElementById(audioId);
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
 
-  <footer>
-    <b>SIGA AS NOSSAS REDES SOCIAIS:</b> <br><br>
-    <div class="social-media">
-      <a href="https://www.instagram.com/atrevidus_nerd/" target="_blank"><img src="./insta.png" alt="Instagram" width="50px"></a>
-      <a href="https://twitter.com/Atrevidusnerd" target="_blank"><img src="./twitter.png" alt="Twitter" width="50px"></a>
-    </div><br><br>  
-    Desenvolvido por <a href="#"><strong>IMPERIUS DEV <img src="./img1/imperius_DevLogo-removebg-preview.png" width="60px" alt=""></strong></a>
-  </footer>
-
-  <script>
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let total = 0;
-
-    function addToCart(item, price, image) {
-      const existingItem = cart.find(i => i.item === item);
-      if (existingItem) {
-        existingItem.quantity++;
-      } else {
-        cart.push({ item, price, quantity: 1, image });
-      }
-      total += price;
-      updateCart();
-    }
-
-    function removeFromCart(item) {
-      const index = cart.findIndex(i => i.item === item);
-      if (index !== -1) {
-        total -= cart[index].price * cart[index].quantity;
-        cart.splice(index, 1);
-        updateCart();
-      }
-    }
-
-    function updateCart() {
-      const cartItemsElement = document.getElementById('cart-items');
-      const totalElement = document.getElementById('total');
-      cartItemsElement.innerHTML = '';
-      cart.forEach(item => {
-        const li = document.createElement('li');
-        li.classList.add('cart-item');
-        const img = document.createElement('img');
-        img.src = item.image;
-        img.alt = item.item;
-        li.appendChild(img);
-        const textNode = document.createTextNode(`${item.item} x${item.quantity} - $${item.price * item.quantity}`);
-        li.appendChild(textNode);
-        const removeBtn = document.createElement('button');
-        removeBtn.textContent = 'Remover';
-        removeBtn.classList.add('remove-btn');
-        removeBtn.onclick = () => removeFromCart(item.item);
-        li.appendChild(removeBtn);
-        cartItemsElement.appendChild(li);
-      });
-      totalElement.textContent = total;
-      localStorage.setItem('cart', JSON.stringify(cart));
-    }
-
-    // Calcular o total ao carregar a página
-    cart.forEach(item => {
-      total += item.price * item.quantity;
-    });
-    updateCart();
-
-    function toggleMode(){
-      const html = document.documentElement;
-      html.classList.toggle("light");
-    }
-  </script>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        function downloadEpisode(audioUrl) {
+            const link = document.createElement('a');
+            link.href = audioUrl;
+            link.download = audioUrl.split('/').pop();
+            link.click();
+        }
+    </script>
 </body>
 </html>

@@ -66,9 +66,9 @@
     <div class="episode">
         <img src="./audio/tava.jpg" alt="Episode 1">
         <h2 class="episode-title">Episódio 1: Tava fora do BR?</h2>
-        <button class="play-btn" onclick="playPause('./audio/Episode 1 tava fora do BR.mpeg')">Play/Pause</button>
+        <button class="play-btn" onclick="playPause('audio1')">Play/Pause</button>
         <button class="download-btn" onclick="downloadEpisode('./audio/Episode 1 tava fora do BR.mpeg')">Download</button><br>
-        <audio style="visibility: hidden;" id="audio" controls>
+        <audio id="audio1" style="visibility: hidden;" controls>
             <source src="./audio/Episode 1 tava fora do BR.mpeg" type="audio/mpeg">
             Seu navegador não suporta o elemento de áudio.
         </audio>
@@ -76,20 +76,10 @@
     <div class="episode">
         <img src="./audio/bomdia.jpg" alt="Episode 2">
         <h2 class="episode-title">Episódio 2: Mermão, bom dia é o baralho!</h2>
-        <button class="play-btn" onclick="playPause('./audio/bom dia.mpeg')">Play/Pause</button>
+        <button class="play-btn" onclick="playPause('audio2')">Play/Pause</button>
         <button class="download-btn" onclick="downloadEpisode('./audio/bom dia.mpeg')">Download</button><br>
-        <audio style="visibility: hidden;" id="audio" controls>
+        <audio id="audio2" style="visibility: hidden;" controls>
             <source src="./audio/bom dia.mpeg" type="audio/mpeg">
-            Seu navegador não suporta o elemento de áudio.
-        </audio>
-    </div><br>
-    <div class="episode">
-        <img src="episode3.jpg" alt="Episode 3">
-        <h2 class="episode-title">Episódio 3</h2>
-        <button class="play-btn" onclick="playPause('episode3.mp3')">Play/Pause</button>
-        <button class="download-btn" onclick="downloadEpisode('episode3.mp3')">Download</button><br>
-        <audio style="visibility: hidden;" id="audio" controls>
-            <source src="" type="audio/mpeg">
             Seu navegador não suporta o elemento de áudio.
         </audio>
     </div><br>
@@ -102,30 +92,30 @@
     </div><br><br>  
     Desenvolvido por <a href="#"><strong>IMPERIUS DEV <img src="./img1/imperius_DevLogo-removebg-preview.png" width="60px" alt=""></strong></a></footer> 
 
-<script>
-    function toggleMode(){
-        const html = document.documentElement
-        html.classList.toggle("light")
-    }
 
-    var audio = document.getElementById("audio");
+    
+    
+    <script>
+        function toggleMode(){
+            const html = document.documentElement
+            html.classList.toggle("light")
+        }
+        function playPause(audioId) {
+            var audio = document.getElementById(audioId);
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
 
-function playPause() {
-    if (audio.paused) {
-        audio.play();
-    } else {
-        audio.pause();
-    }
-
-    }
-
-    function downloadEpisode(audioUrl) {
-        const link = document.createElement('a');
-        link.href = audioUrl;
-        link.download = audioUrl.split('/').pop();
-        link.click();
-    }
-</script>
+        function downloadEpisode(audioUrl) {
+            const link = document.createElement('a');
+            link.href = audioUrl;
+            link.download = audioUrl.split('/').pop();
+            link.click();
+        }
+    </script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
