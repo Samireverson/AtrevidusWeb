@@ -216,7 +216,7 @@ flex-basis: 20%;
         box-sizing: border-box;
     }
     .logo{
-        display: none;
+    
     }
     .navbar{
         position: absolute;
@@ -253,6 +253,7 @@ flex-basis: 20%;
     }
     .clik{
         display: block;
+        
     }
     .check{
         display: none;
