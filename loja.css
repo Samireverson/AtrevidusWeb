@@ -5,27 +5,20 @@
 }
 
 body{
-   /* border: 1px solid red;*/
-    background: var(--bg-color)
-    /*min-width: 100vh;*/
+    font-family: Arial, sans-serif;
+background: var(--bg-color);
+color: var(--ltr-color);
 }
 :root{
-    --bg-color:#fff;
-    color: #000;
-    --card-color:#333;
-    --cardp-color: #fff;
-    --bg-background: url(./img1/bannAN.png);
-    --luz-head: #000;
+--bg-color: #fff;
+--ltr-color:#000;
+--luz-head:#333;
 }
 .light{
-    --bg-color:#333;
-    color:#fff;
-    --card-color: #fff;
-    --cardp-color:#000;
-    --bg-background: url(./img1/bannAN2.jpg);
-    --luz-head: #fff;
+--bg-color: #333;
+--ltr-color:#fff;
+--luz-head: #fff;
 }
-
 .header{
     /*border: 1px solid red;*/
     position: fixed;
@@ -78,25 +71,6 @@ body{
 .navbar ul li:hover > ul{
     display: initial;
 }
-#clic{
-   /* border: 1px solid red;*/
-    width: 90px;
-    /*position: relative;*/
-    margin: 4px auto;
-    cursor: pointer;
-}
-#clic button{
-   /* display: none;
-    width: 40px;
-    height: 30px;
-    border-radius: 50%;*/
-    border: none;
-    position: relative;
-    left: 0;
-    z-index: 1;
-    background: url(./moon-svgrepo-com.svg) no-repeat center;
-    
-}
 .box{
     display: flex;
     padding: 10px 20px;
@@ -116,75 +90,63 @@ body{
 .box:hover input{
         width: 400px;
     }
- #imgBG{
-      height: 500px;
-      width: 100%;
-      background: var(--bg-background);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment:fixed;
-      background-color: var(--cardp-color);
- }
- .carrosel {
-   /* border: 1px solid red;*/
-    visibility: visible;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: scroll;
-    scrollbar-width:none;
-}
-.pic img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    width: calc(200px *2);
-}
-.pic{
-    flex: 1 0 auto;
-    margin: 0 5px;
-    width: 400px;
-    height: 400px;
-}
-.container{
-display: flex;
-gap: 1rem;
-}
-aside, main {
-margin: 10px;
-height: 95vh;
-}
-main{
- border: 1px solid green;
-flex: 1;
-}
-aside{
-flex-basis: 20%;
-}
-.card .img1{
-  width: 300px ;
-  background: var(--card-color);
-}
-.card h2{
-    text-align: center;
-    justify-content: center;
-    background: var(--card-color);
-    color: var(--cardp-color);
-}
-.card p{
-    text-align: center;
-    justify-content: center;
-    background: var(--card-color);
-    color: var(--cardp-color);
-}
-.card p{
-    visibility: hidden;
-}
-.card:hover p{
-    visibility: visible;
-}
-
-
-
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    #main
+     {
+      width: 45%; /* Alterado para largura total em telas menores */
+      padding: 5px;
+      box-sizing: border-box; /* Garantindo que o preenchimento não aumente a largura */
+    }
+    
+      #cart {
+        width: 35%;
+        padding: 5px;
+      box-sizing: border-box;
+      }
+    .product {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #cart-container {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    #cart-items {
+      list-style-type: none;
+      padding: 10px;
+    }
+    .cart-item {
+      display: grid;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .cart-item img {
+      max-width: 50px;
+      margin-right: 10px;
+    }
+    .remove-btn {
+      background-color: #f44336;
+    }
+    .remove-btn:hover {
+      background-color: #dd3333;
+    }
+    
  footer{
     width: 100%;
     padding: 32px;
@@ -206,9 +168,7 @@ flex-basis: 20%;
 .box1{
     display: none;
 }
-
-
-
+    
 @media(max-width: 600px){
     *{
         margin: 0;
@@ -268,17 +228,13 @@ flex-basis: 20%;
         margin: 5px;
         line-height: 30px;
      }
-    aside, main{
-        display: none;
+     #main
+     {
+      width: 55%; /* Alterado para largura total em telas menores */
+      padding: 5px;
+      box-sizing: border-box; /* Garantindo que o preenchimento não aumente a largura */
     }
-    .side{
-        width: 200px;
-        position:static;
-        display: block;
-    }
-    .card .img1{
-        width: 200px ;
-        background: var(--card-color);
-      }
+    
+     
 
     }
