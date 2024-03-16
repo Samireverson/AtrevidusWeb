@@ -5,51 +5,97 @@
 }
 
 body{
-background: var(--bg-color);
-color: var(--ltr-color);
+   /* border: 1px solid red;*/
+    background: var(--bg-color)
+    /*min-width: 100vh;*/
 }
 :root{
---bg-color: #fff;
---ltr-color:#000;
+    --bg-color:#fff;
+    color: #000;
+    --card-color:#333;
+    --cardp-color: #fff;
+    --bg-background: url(./img1/bannAN.png);
+    --luz-head: #000;
 }
 .light{
---bg-color: #333;
---ltr-color:#fff;
+    --bg-color:#333;
+    color:#fff;
+    --card-color: #fff;
+    --cardp-color:#000;
+    --bg-background: url(./img1/bannAN2.jpg);
+    --luz-head: #fff;
 }
+
 .header{
-    background: #e3e0e0;
-    display: flex;
+    /*border: 1px solid red;*/
     position: fixed;
-    box-shadow: 0 5px 8px #000;
-    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 8px 70px;
-   top: 0;
-   left: 0;
-   right: 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    background-color: #e3e0e0;
+    box-shadow: 0 5px 10px #000;
     z-index: 1;
 }
 .navbar ul{
     list-style: none;
+   /* border: 1px solid red;*/
+    
 }
 .navbar ul li{
     position: relative;
     float: left;
 }
+
 .navbar ul li a{
-    display: block;
     font-size: 25px;
-    padding: 30px;
-    text-decoration: none;
+    padding: 20px;
     color: #000;
+    display: block;
+    text-decoration: none;
 }
 .navbar ul li a:hover{
     background-color: #333;
-    color: #fff;
+    color:#fff;
+    transition: all 0.4s;
+}
+
+.navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 195px;
+    background-color: #e3e0e0;
+    display: none;
+    z-index: 1;
+}
+.navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid #000;
+}
+.navbar ul li:hover > ul{
+    display: initial;
+}
+#clic{
+   /* border: 1px solid red;*/
+    width: 90px;
+    /*position: relative;*/
+    margin: 4px auto;
+    cursor: pointer;
 }
 #clic button{
+   /* display: none;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;*/
     border: none;
-    background: none;
+    position: relative;
+    left: 0;
+    z-index: 1;
+    background: url(./moon-svgrepo-com.svg) no-repeat center;
+    
 }
 .box{
     display: flex;
@@ -71,7 +117,6 @@ color: var(--ltr-color);
         width: 400px;
     }
 .imgBG2{
-   position: relative;
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center;
@@ -114,7 +159,121 @@ footer{
     justify-content: center;
     gap: 12px;
  }
+
+ #podcast {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.episode {
+    text-align: center;
+}
+
+.episode img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.episode-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.play-btn, .download-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+.clik{
+    display: none;
+ }
+.check{
+    display: none;
+}
+.box1{
+    display: none;
+}
+
+
  @media(max-width: 600px){
    
-
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .logo{
+        display: none;
+    }
+    .navbar{
+        position: absolute;
+        top: 110px;
+        background: #e3e0e0;
+        left: -100%;
+        height: 90vh;
+        width: 70%;
+        text-align: center;
+        transition: ease all .5s;
+        z-index: 1;
+    }
+    .box{
+        display: none;
+    }
+    .box1:hover input{
+        width: 250px;
+    }
+    .box1{
+        display: flex;
+        padding: 10px 20px;
+        background: #fff;
+        border-radius: 50px;
+        align-items: center;
+        box-shadow: 0 5px 10px #000;
+        
+    }
+    .box1 input{
+        width: 0;
+        outline: none;
+        border: none;
+        transition: 0.8s;
+        background: transparent;
+    }
+    .clik{
+        display: block;
+    }
+    .check{
+        display: none;
+        
+    }
+    .check:checked ~ .navbar{
+        left: 0;
+         
+     }
+     .navbar ul li a{
+        justify-content: space-between;
+        font-size: 35px;
+        margin: 5px;
+        line-height: 30px;
+     }
+     .imgBG2{
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-color: #fff;
+        width: 100%;
+        height: 440px;
+        background-image: url("./img1/olhonerdx.jpg");}
  }
