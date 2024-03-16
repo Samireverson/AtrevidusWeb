@@ -1,98 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="./logoAN.png">
-    <link rel="stylesheet" href="./olhoNerd.css">
-    <title>olho por nerd</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="programas.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./atrevidus_logo.png">
+  <title>Loja Nerd</title>
 </head>
 <body>
-    <header class="header">
-        <a href="#"><img src="./atrevidus_logo.png" alt="logo" width="90px" height="90px" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"></a>
-        <div id="clic" onclick="toggleMode()">
-            <button>
-            <span>MODO<BR>🌙DARK</span>
-        </button>
-        </div>
-        <div class="menux">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./Noticia.html">NOTÍCIAS</a></li>
-                    <li><a href="./loja.html">LOJA</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="box">
-            <input type="text" placeholder="pesquisar...">
-            <a href="#">
-                <ion-icon name="search"></ion-icon>
-            </a>
-        </div>
-    </header>
-    <div class="imgBG2"></div><br><br>
-    <h1 style="text-align: center; font-size: 50px;">____________OLHO POR OLHO, NERD POR NERD____________</h1><br><br>
-<main>
-<section id="podcast">
-    <div>
-        <a class="title" href="#"style="text-decoration: none;"><h1 style="text-decoration: underline;">OLHO POR OLHO, NERD POR NERD</h1></a><br><br> 
-        <span style="font-size: 25px;">
-            <p>O programa <b>"OLHO POR OLHO, NERD POR NERD"</b> é um podcast idealizado por amantes da cultura pop como filmes, quadrinhos, livros, games e afim que leva aos consumidores dos conteúdos do site uma forma bastante descontraída as novidades e também informações já passadas para que o fã esteja sempre informado sobre as maravilhas do mundo <b>NERD/GEEK.</b></p>
-        </span>
-    </div>
-    <a href="#">
-        <img id="pic" src="./olhoNerd.png" alt="">
+  <header class="header">
+    <input type="checkbox" id="menu-toggle" class="hidden">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <a href="#" class="logo">
+      <img src="./img1/OIG1.jpg" alt="Logo" width="90px" height="90px">
     </a>
-</section>
+    <div class="mode-toggle" onclick="toggleMode()">
+      <button><ion-icon name="moon"></ion-icon></button>
+      <span>MODO<br>DARK</span>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="./index.html">HOME</a></li>
+        <li>
+          <a href="#">DESTAQUE <ion-icon name="chevron-down"></ion-icon></a>
+          <ul>
+            <li><a href="./Noticia.html">NOTÍCIAS</a></li>
+            <li><a href="./olhoNerd.html">PROGRAMAS</a></li>
+          </ul>
+        </li>
+        <li><a href="./loja.html">LOJA</a></li>
+      </ul>
+    </nav>
+    <div class="search-box">
+      <input type="text" placeholder="Pesquisar...">
+      <button><ion-icon name="search"></ion-icon></button>
+    </div>
+  </header>
 
-<section id="podcast-list">
-    <div class="episode">
-        <img src="./audio/tava.jpg" alt="Episode 1">
-        <h2 class="episode-title">Episódio 1: Tava fora do BR?</h2>
-        <button class="play-btn" onclick="playAudio('./audio/Episode 1 tava fora do BR.mpeg')">Play</button>
-        <button class="download-btn" onclick="downloadEpisode('./audio/Episode 1 tava fora do BR.mpeg')">Download</button>
+  <div class="container">
+    <div id="main">
+      <h2>Roupas</h2>
+      <div class="product">
+        <img src="./imgshop/camisadevil.jpg" alt="Camiseta Nerd" width="200px">
+        <h3>Regata Atrevidus Nerd - Demon</h3>
+        <p>Preço: $15</p>
+        <button onclick="addToCart('Regata Atrevidus Nerd - Demon', 15, './imgshop/camisadevil.jpg')">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="./imgshop/camisasamurai.jpg" alt="Moleton Star Wars" width="200px">
+        <h3>Regata Atrevidus Nerd - Samurai</h3>
+        <p>Preço: $25</p>
+        <button onclick="addToCart('Regata Atrevidus Nerd - Samurai', 25, './imgshop/camisasamurai.jpg')">Adicionar ao Carrinho</button>
+      </div>
     </div>
-    <div class="episode">
-        <img src="episode2.jpg" alt="Episode 2">
-        <h2 class="episode-title">Episódio 2</h2>
-        <button class="play-btn" onclick="playAudio('episode2.mp3')">Play</button>
-        <button class="download-btn" onclick="downloadEpisode('episode2.mp3')">Download</button>
+
+    <div id="aside">
+      <h2>Canecas</h2>
+      <div class="product">
+        <img src="./imgshop/canecpirat.jpg" alt="Caneca Harry Potter" width="200px">
+        <h3>Caneca Atrevidus Nerd - Pirata</h3>
+        <p>Preço: $10</p>
+        <button onclick="addToCart('Caneca Atrevidus Nerd - Pirata', 10, './imgshop/canecpirat.jpg')">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="./imgshop/canecviking.jpg" alt="Caneca Batman" width="200px">
+        <h3>Caneca Atrevidus Nerd - Viking</h3>
+        <p>Preço: $8</p>
+        <button onclick="addToCart('Caneca Atrevidus Nerd - Viking', 8, './imgshop/canecviking.jpg')">Adicionar ao Carrinho</button>
+      </div>
     </div>
-    <div class="episode">
-        <img src="episode3.jpg" alt="Episode 3">
-        <h2 class="episode-title">Episódio 3</h2>
-        <button class="play-btn" onclick="playAudio('episode3.mp3')">Play</button>
-        <button class="download-btn" onclick="downloadEpisode('episode3.mp3')">Download</button>
+
+    <div id="cart">
+      <h2>Carrinho</h2>
+      <div id="cart-container">
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total">0</span></p>
+      </div>
     </div>
-</section>
-</main>
-<footer><b>SIGA AS NOSSAS REDES SOCIAIS:</b> <br><br>
-    <div class="imedia">
-        <a href="https://www.instagram.com/atrevidus_nerd/" target="_blank"><img src="./insta.png" alt="" width="50px"></a>
-        <a href="https://twitter.com/Atrevidusnerd" target="_blank"><img src="./twitter.png" alt="" width="50px"></a>
+  </div>
+
+  <footer>
+    <b>SIGA AS NOSSAS REDES SOCIAIS:</b> <br><br>
+    <div class="social-media">
+      <a href="https://www.instagram.com/atrevidus_nerd/" target="_blank"><img src="./insta.png" alt="Instagram" width="50px"></a>
+      <a href="https://twitter.com/Atrevidusnerd" target="_blank"><img src="./twitter.png" alt="Twitter" width="50px"></a>
     </div><br><br>  
-    Desenvolvido por <a href="#"><strong>IMPERIUS DEV <img src="./img1/imperius_DevLogo-removebg-preview.png" width="60px" alt=""></strong></a></footer> 
+    Desenvolvido por <a href="#"><strong>IMPERIUS DEV <img src="./img1/imperius_DevLogo-removebg-preview.png" width="60px" alt=""></strong></a>
+  </footer>
 
-<script>
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let total = 0;
+
+    function addToCart(item, price, image) {
+      const existingItem = cart.find(i => i.item === item);
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        cart.push({ item, price, quantity: 1, image });
+      }
+      total += price;
+      updateCart();
+    }
+
+    function removeFromCart(item) {
+      const index = cart.findIndex(i => i.item === item);
+      if (index !== -1) {
+        total -= cart[index].price * cart[index].quantity;
+        cart.splice(index, 1);
+        updateCart();
+      }
+    }
+
+    function updateCart() {
+      const cartItemsElement = document.getElementById('cart-items');
+      const totalElement = document.getElementById('total');
+      cartItemsElement.innerHTML = '';
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.classList.add('cart-item');
+        const img = document.createElement('img');
+        img.src = item.image;
+        img.alt = item.item;
+        li.appendChild(img);
+        const textNode = document.createTextNode(`${item.item} x${item.quantity} - $${item.price * item.quantity}`);
+        li.appendChild(textNode);
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remover';
+        removeBtn.classList.add('remove-btn');
+        removeBtn.onclick = () => removeFromCart(item.item);
+        li.appendChild(removeBtn);
+        cartItemsElement.appendChild(li);
+      });
+      totalElement.textContent = total;
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Calcular o total ao carregar a página
+    cart.forEach(item => {
+      total += item.price * item.quantity;
+    });
+    updateCart();
+
     function toggleMode(){
-        const html = document.documentElement
-        html.classList.toggle("light")
+      const html = document.documentElement;
+      html.classList.toggle("light");
     }
+  </script>
 
-    function playAudio(audioUrl) {
-        const audio = new Audio(audioUrl);
-        audio.play();
-    }
-
-    function downloadEpisode(audioUrl) {
-        const link = document.createElement('a');
-        link.href = audioUrl;
-        link.download = audioUrl.split('/').pop();
-        link.click();
-    }
-</script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

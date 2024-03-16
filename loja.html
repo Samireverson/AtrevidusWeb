@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="loja.css">
+  <link rel="shotcut icon" type="x-icon" href="./atrevidus_logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loja Nerd</title>
 
@@ -34,7 +35,7 @@
                 <li><a href="#">DESTAQUE <ion-icon name="chevron-down"></ion-icon></a>
                 <ul>
                         <li><a href="./Noticia.html">NOTICIAS</a></li>
-                        <li><a href="./programas.html">PROGRAMAS</a></li>
+                        <li><a href="./olhoNerd.html">PROGRAMAS</a></li>
                     </ul>
                 </li>
                 <li><a href="./loja.html">LOJA</a></li>
@@ -48,10 +49,10 @@
             </a>
         </div>
         
-    </header><br><br><br><br><br><br><br>
+    </header><br><br><br><br><br><br><br><br><br>
   <div class="container">
     <div id="main">
-      <h2>Roupas</h2>
+      <h2 style="text-align: center; "class="cart">Roupas</h2>
       <div class="product">
         <img src="./imgshop/camisadevil.jpg" alt="Camiseta Nerd" width="200px">
         <h3>Regata Atrevidus Nerd - Demon</h3>
@@ -65,8 +66,8 @@
         <button onclick="addToCart('Regata Atrevidus Nerd - Samurai', 25, './imgshop/camisasamurai.jpg')">Adicionar ao Carrinho</button>
       </div>
     </div>
-    <div id="aside">
-      <h2>Canecas</h2>
+    <div  id="aside">
+      <h2 style="text-align: center;"class="cart">Canecas</h2>
       <div class="product">
         <img src="./imgshop/canecpirat.jpg" alt="Caneca Harry Potter" width="200px">
         <h3>Caneca Atrevidus Nerd - Pirata</h3>
@@ -80,8 +81,8 @@
         <button onclick="addToCart('Caneca Atrevidus Nerd - Viking', 8, './imgshop/canecviking.jpg')">Adicionar ao Carrinho</button>
       </div>
     </div>
-    <div id="cart">
-      <h2>Carrinho</h2>
+    <div  id="cart">
+      <h2 style="text-align: center;"class="cart">Carrinho</h2>
       <div id="cart-container">
         <ul id="cart-items"></ul>
         <p>Total: $<span id="total">0</span></p>

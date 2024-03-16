@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="./logoAN.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./atrevidus_logo.png">
     <link rel="stylesheet" href="./olhoNerd.css">
     <title>olho por nerd</title>
 </head>
@@ -66,20 +66,32 @@
     <div class="episode">
         <img src="./audio/tava.jpg" alt="Episode 1">
         <h2 class="episode-title">Episódio 1: Tava fora do BR?</h2>
-        <button class="play-btn" onclick="playAudio('./audio/Episode 1 tava fora do BR.mpeg')">Play</button>
-        <button class="download-btn" onclick="downloadEpisode('./audio/Episode 1 tava fora do BR.mpeg')">Download</button>
+        <button class="play-btn" onclick="playPause('./audio/Episode 1 tava fora do BR.mpeg')">Play/Pause</button>
+        <button class="download-btn" onclick="downloadEpisode('./audio/Episode 1 tava fora do BR.mpeg')">Download</button><br>
+        <audio style="visibility: hidden;" id="audio" controls>
+            <source src="./audio/Episode 1 tava fora do BR.mpeg" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
     </div><br>
     <div class="episode">
-        <img src="episode2.jpg" alt="Episode 2">
-        <h2 class="episode-title">Episódio 2</h2>
-        <button class="play-btn" onclick="playAudio('episode2.mp3')">Play</button>
-        <button class="download-btn" onclick="downloadEpisode('episode2.mp3')">Download</button>
+        <img src="./audio/bomdia.jpg" alt="Episode 2">
+        <h2 class="episode-title">Episódio 2: Mermão, bom dia é o baralho!</h2>
+        <button class="play-btn" onclick="playPause('./audio/bom dia.mpeg')">Play/Pause</button>
+        <button class="download-btn" onclick="downloadEpisode('./audio/bom dia.mpeg')">Download</button><br>
+        <audio style="visibility: hidden;" id="audio" controls>
+            <source src="./audio/bom dia.mpeg" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
     </div><br>
     <div class="episode">
         <img src="episode3.jpg" alt="Episode 3">
         <h2 class="episode-title">Episódio 3</h2>
-        <button class="play-btn" onclick="playAudio('episode3.mp3')">Play</button>
-        <button class="download-btn" onclick="downloadEpisode('episode3.mp3')">Download</button>
+        <button class="play-btn" onclick="playPause('episode3.mp3')">Play/Pause</button>
+        <button class="download-btn" onclick="downloadEpisode('episode3.mp3')">Download</button><br>
+        <audio style="visibility: hidden;" id="audio" controls>
+            <source src="" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
     </div><br>
 </section>
 </main><br><br><br><br>
@@ -96,9 +108,15 @@
         html.classList.toggle("light")
     }
 
-    function playAudio(audioUrl) {
-        const audio = new Audio(audioUrl);
+    var audio = document.getElementById("audio");
+
+function playPause() {
+    if (audio.paused) {
         audio.play();
+    } else {
+        audio.pause();
+    }
+
     }
 
     function downloadEpisode(audioUrl) {

@@ -102,6 +102,10 @@ color: var(--ltr-color);
       padding: 5px;
       box-sizing: border-box; /* Garantindo que o preenchimento não aumente a largura */
     }
+    .cart{
+      background: var(--luz-head);
+      color: var(--bg-color);
+    }
     
       #cart {
         width: 35%;

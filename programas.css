@@ -1,156 +1,243 @@
-*{
+/* Estilos no seu arquivo loja.css */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
-background: var(--bg-color);
-color: var(--ltr-color);
-}
-:root{
---bg-color: #fff;
---ltr-color:#000;
-}
-.light{
---bg-color: #333;
---ltr-color:#fff;
-}
-.header{
-    background: #e3e0e0;
-    display: flex;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--ltr-color);
+  }
+  
+  :root {
+    --bg-color: #fff;
+    --ltr-color: #000;
+    --luz-head: #333;
+  }
+  
+  .light {
+    --bg-color: #333;
+    --ltr-color: #fff;
+    --luz-head: #fff;
+  }
+  
+  .header {
     position: fixed;
-    box-shadow: 0 5px 8px #000;
-    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 8px 70px;
-   top: 0;
-   left: 0;
-   right: 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    background-color: #e3e0e0;
+    box-shadow: 0 5px 10px #000;
     z-index: 1;
-}
-.navbar ul{
+  }
+  
+  .navbar ul {
     list-style: none;
-}
-.navbar ul li{
+  }
+  
+  .navbar ul li {
     position: relative;
     float: left;
-}
-.navbar ul li a{
-    display: block;
+  }
+  
+  .navbar ul li a {
     font-size: 25px;
-    padding: 30px;
-    text-decoration: none;
+    padding: 20px;
     color: #000;
-}
-.navbar ul li a:hover{
+    display: block;
+    text-decoration: none;
+  }
+  
+  .navbar ul li a:hover {
     background-color: #333;
     color: #fff;
-}
-#clic button{
-    border: none;
-    background: none;
-}
-.box{
+    transition: all 0.4s;
+  }
+  
+  .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 195px;
+    background-color: #e3e0e0;
+    display: none;
+    z-index: 1;
+  }
+  
+  .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid #000;
+  }
+  
+  .navbar ul li:hover > ul {
+    display: initial;
+  }
+  
+  .box,
+  .box1 {
     display: flex;
     padding: 10px 20px;
     background: #fff;
     border-radius: 50px;
     align-items: center;
     box-shadow: 0 5px 10px #000;
-    
-}
-.box input{
+  }
+  
+  .box input,
+  .box1 input {
     width: 0;
     outline: none;
     border: none;
     transition: 0.8s;
     background: transparent;
-}
-.box:hover input{
-        width: 400px;
-    }
-.imgBG2{
-   position: relative;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-position: center;
-   background-size: contain;
-   background-color: #fff;
-   width: 100%;
-   height: 490px;
-   background-image: url(./img1/olhonerdx1.jpg);
-
-}
-#pic{
-    width: 250px;
-    cursor: pointer;
-    transition: all 0.3s;
-    border: 1px solid #333;
   }
-  #pic:hover{
-    width: 350px;
+  
+  .box:hover input,
+  .box1:hover input {
+    width: 400px;
   }
-  .title{
-    color: var(--ltr-color);
-  }
-#podcast{
+  
+  .container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  #main {
+    width: 45%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  #cart {
+    width: 35%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #cart-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+  .cart-item {
+    display: grid;
     align-items: center;
-    gap: 32px;
-    position: relative;
-    padding: 24px 80px 120px 80px;
-    
-}
-footer{
+    margin-bottom: 5px;
+  }
+  
+  .cart-item img {
+    max-width: 50px;
+    margin-right: 10px;
+  }
+  
+  .remove-btn {
+    background-color: #f44336;
+  }
+  
+  .remove-btn:hover {
+    background-color: #dd3333;
+  }
+  
+  footer {
     width: 100%;
     padding: 32px;
     background: #e3e0e0;
     color: #000;
     text-align: center;
-}
-.imedia{
-   display: flex;
-   justify-content: center;
-   gap: 12px;
-}
-#podcast {
+  }
+  
+  .imedia {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 50px;
-}
-
-.episode {
-    text-align: center;
-}
-
-.episode img {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.episode-title {
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-.download-btn {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;}
-
-
-@media(max-width: 600px){
-   
-
-}
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .clik {
+    display: none;
+  }
+  
+  .check {
+    display: none;
+  }
+  
+  .box1 {
+    display: none;
+  }
+  
+  @media(max-width: 600px) {
+    /* Estilos para telas menores */
+    .logo {
+      display: none;
+    }
+  
+    .navbar {
+      position: absolute;
+      top: 110px;
+      background: #e3e0e0;
+      left: -100%;
+      height: 90vh;
+      width: 70%;
+      text-align: center;
+      transition: ease all .5s;
+      z-index: 1;
+    }
+  
+    .box {
+      display: none;
+    }
+  
+    .box1:hover input {
+      width: 250px;
+    }
+  
+    .clik {
+      display: block;
+    }
+  
+    .check:checked ~ .navbar {
+      left: 0;
+    }
+  
+    .navbar ul li a {
+      justify-content: space-between;
+      font-size: 35px;
+      margin: 5px;
+      line-height: 30px;
+    }
+  
+    #main {
+      width: 55%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+  }
+  
