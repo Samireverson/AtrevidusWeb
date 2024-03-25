@@ -132,7 +132,7 @@ color: var(--ltr-color);
     margin-bottom: 20px;
 }
 .main-news img {
-    width: 85%;
+    width: 100%;
     height: 500px;
 }
 .main-news .content {
@@ -154,10 +154,15 @@ color: var(--ltr-color);
     height: auto;
 }
 .carousel-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    margin-top: 20px;
+    visibility: visible;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scrollbar-width:none;
+    padding: 18px;
+    gap: 8px;
+    display: flex;
+    transition: transform 1s ease;
 }
 .carousel-content {
     padding: 18px;
@@ -168,10 +173,10 @@ color: var(--ltr-color);
 .carousel-item {
     flex: 0 0 25%;
 }
-aside {
+/*aside {
     height: 60vh;
-   /* border: 1px solid var(--ltr-color);*/
-    flex: 5%; /* Ajustando a largura do aside */
+   border: 1px solid var(--ltr-color);
+    flex: 5%;
     text-align: center;
 
 }
@@ -182,7 +187,7 @@ aside h2 {
 aside img {
     width: 70%;
     margin-bottom: 5px;
-}
+}*/
 
 footer{
     width: 100%;
@@ -291,10 +296,10 @@ footer{
     .secondary-news {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-    aside {
+    /*aside {
         flex: 45%;
         position: static;
-    }
+    }*/
     
     .main-news {
         flex: 100%;
